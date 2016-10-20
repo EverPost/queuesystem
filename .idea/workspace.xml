@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdf0c396-9434-4c5f-9164-416c80e3ae1a" name="Default" comment="" />
+    <list default="true" id="cdf0c396-9434-4c5f-9164-416c80e3ae1a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/.idea/mytest.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/db.sqlite3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/demos/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/demos/admin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/demos/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/demos/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/demos/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/demos/tests.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/demos/urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/demos/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/manage.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/mytest/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/mytest/settings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/mytest/urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mytest/mytest/wsgi.py" afterPath="" />
+    </list>
     <ignored path="queuesystem.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -532,7 +551,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="43" y="135" width="1234" height="663" extended-state="1" />
+    <frame x="43" y="135" width="1234" height="663" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2558725" sideWeight="0.5968586" order="0" side_tool="false" content_ui="combo" />
