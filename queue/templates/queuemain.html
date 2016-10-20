@@ -1,0 +1,60 @@
+{%  extends 'basequeue.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ '预约' }}
+{% endblock %}
+
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/queuemain.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/icon.css' %}">
+    <script>
+        function choice(e) {
+            var name = $(e).children('i')[0].className;
+            $('.personIcon i').removeClass('selected');
+            $('.personIcon i').addClass('unselected');
+            if (name=='unselected'){
+                $(e).children('i').addClass('selected');
+                $(e).children('i').removeClass('unselected');
+            }else{
+                $(e).children('i').addClass('unselected');
+                $(e).children('i').removeClass('selected');
+            }
+        }
+
+        function tosubmit() {
+           var obj = $('.selected')[0];
+           var productId = $('.formfiled')[0].id;
+            if(obj){
+                window.location.href = '/queue/' + productId + '/' +obj.id;
+            }else {
+                layer.msg('请先选择美容师')
+            }
+        }
+    </script>
+{% endblock %}
+
+
+{% block content %}
+    <div class="top">
+        {% if product.image %}
+            <img src="{{ product.image.url }}">
+        {% endif %}
+        <p class="title">{{ product.name }}</p>
+        <p>{{ product.des}}</p>
+    </div>
+
+    <div class="formfiled" id="{{ product.id }}">
+        {% for person in persons %}
+            <div class="item {% if forloop.counter|divisibleby:2 %}inline{% endif %}">
+                <div id="{{ forloop.counter }}" class="personIcon" onclick="choice(this)">
+                    <img src="{{ person.icon.url }}">
+                    <i id="{{ person.id }}" class="unselected"></i>
+                </div>
+                <span>{{ person.name }}</span>
+            </div>
+        {% endfor %}
+    </div>
+
+   <a class="footerBtn" onclick="tosubmit()">点击预约</a>
+{% endblock %}

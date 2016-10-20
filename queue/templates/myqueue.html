@@ -1,0 +1,47 @@
+{%  extends 'basequeue.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ '排队' }}
+{% endblock %}
+
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/myqueue.css' %}">
+    <script>
+        function startqueue() {
+                $.ajax({
+                    url:'/queue/myorder/1/',
+                    type:'POST',
+                    data:{a:'a'},
+                })
+                .done(function (data) {
+                    layer.msg(data);
+                    setTimeout(function(){window.location.href = "/queue/myorder/1";}, 2000);
+                })
+                .fail(function (xhr,status,errorThrown) {
+                   layer.msg(status);
+                });
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block" style="background-image: url({% static 'images/bgg.png' %});background-repeat:no-repeat;-moz-background-size:100% 100%;
+    background-size:100% 100%;margin:0 auto;">
+    {% if queueorder %}
+        <div class="centered">
+            <div class="queuenumber">
+               <span class="number">{{ queueorder.number }}<small>号</small></span>
+            </div>
+            <span class="title" style="color: green">前面还有<strong>{{ personnumber }}</strong>人,预计<strong>{{ times }}</strong>分钟</span>
+        </div>
+    {% else %}
+        <div class="centered">
+            <h3>xxx美容美发</h3>
+            <p>创新，时尚,独特，最高品质; 管理理念：以人为本，以客为尊; 职业道德：宁可浪族人吃亏，不让顾客吃亏; 浪族品质：只提供卓越的的品质，绝不提供伪劣的产品; 浪族发型设计中心：专做奇特有品味的发型、专为有品味、爱美的佳人设立的场所。 浪族发型设计中心经过精心的筹备，特聘专业的设计师，店面风格独具匠心的现代化时尚美发店</p>
+        <button onclick="startqueue()">开始排队</button>
+    </div>
+    {% endif %}
+
+    </div>
+{% endblock %}

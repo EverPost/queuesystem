@@ -1,0 +1,44 @@
+.selected{
+    height: 25px;
+    width: 25px;
+    background: url("../images/selected.png") no-repeat;
+    background-size: 25px;
+    position: absolute;
+    background-position: center;
+    right: 0px;
+    top: 0px;
+}
+
+.unselected{
+    height: 25px;
+    width: 25px;
+    background: url("../images/unselected.png") no-repeat;
+    background-size: 25px;
+    position: absolute;
+    background-position: center;
+    right: 0px;
+    top: 0px;
+}
+
+.timeiocn{
+    height: 25px;
+    width: 25px;
+    background:url("../images/timeicon.png") no-repeat;
+    background-size: 20px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 5px;
+    background-position: center;
+}
+.indicator{
+    float: right;
+    width: 15px;
+    height: 15px;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform:rotate(-45deg);
+    margin-top: 15px;
+}
+

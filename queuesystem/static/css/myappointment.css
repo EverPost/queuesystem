@@ -1,0 +1,85 @@
+body{
+
+  background: white;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+    min-width: 320px;
+  line-height: 1.42857143;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+div{
+}
+p{
+    margin:0px;
+    padding: 0 8px;
+}
+a{
+    color: #222222;
+    text-decoration: none;
+}
+.clearfix{
+    clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.padding-8{
+    padding:8px;
+}
+.lightgray-text{
+    color: lightgray;
+}
+.container{
+}
+
+/*---------------------------*/
+.myappiontment{
+    margin-top: 10px;
+    height: 100px;
+    width: 100%;
+}
+.myappiontment.green{
+    background: green;
+}
+.myappiontment.red{
+    background: red;
+}
+.myappiontment img{
+    float: left;
+    width:80px;
+    height:80px;
+    margin-left:10px;
+    margin-top:10px;
+}
+.appointheader span{
+    text-align: left;
+    padding: 0px 8px;
+}
+.appointheader span:last-child{
+    float: right;
+}
+.appointcontent > span{
+    display: block;
+    margin-left: 98px;
+}
+
+span{
+    color: white;
+    line-height: 33px;
+    text-align: left;
+}

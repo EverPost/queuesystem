@@ -1,0 +1,25 @@
+#libraries:
+#- name: "django"
+#  version: "1.8.3"
+# if use custom django version you need do 1.pip install -t vendor django==customversion  2.fixed your wsgi.py
+#import os
+#import sys
+#
+#root = os.path.dirname(__file__)
+#sys.path.insert(0, os.path.join(root, '..', 'vendor'))
+#
+#from django.core.wsgi import get_wsgi_application
+#
+#os.environ.setdefault("DJANGO_SETTINGS_MODULE", "queuesystem.settings")
+#
+#application = get_wsgi_application()
+
+#handlers:
+#- url: /static
+#  static_dir: path/to/queuesystem/static
+
+#use it when let django fixed admin app static dir
+# config.yaml
+handlers:
+- url: /foo
+  static_dir: foo

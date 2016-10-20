@@ -1,0 +1,113 @@
+body{
+
+  background: white;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+    min-width: 320px;
+  line-height: 1.42857143;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html,body{
+    margin:0px;
+    height: 100%;
+}
+
+p{
+    margin:0px;
+    padding: 0 8px;
+}
+a{
+    color: #222222;
+    text-decoration: none;
+}
+.clearfix{
+    clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.padding-8{
+    padding:8px;
+}
+.lightgray-text{
+    color: lightgray;
+}/* This parent can be any width and height */
+.block {
+  text-align: center;
+  height: 100%;
+}
+
+/* The ghost, nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+/* The element to be centered, can
+   also be of any width and height */
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 90%;
+}
+.centered button{
+    background: green;
+    width: 200px;
+    height: 40px;
+    margin-top: 80px;
+    line-height: 40px;
+    color: white;
+    border: 1px solid green;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.queuenumber{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.number{
+    line-height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 80px;
+    height: 80px;
+    color: white;
+    font-size: 40px;
+    background: green;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.number small{
+    font-size: 14px;
+}
+strong{
+    font-weight: bold;
+    font-size: 40px;
+    color:red;
+}
+.title{
+    font-size: 20px;
+}

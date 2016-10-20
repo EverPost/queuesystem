@@ -1,0 +1,56 @@
+{%  extends 'basequeue.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ '预约' }}
+{% endblock %}
+
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/queuetoperson.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/icon.css' %}">
+    <script>
+        function submit(productid,personid) {
+           var  strtime = $('#datePicker').val().replace('T',' ');
+           var date1 =new Date(strtime);
+           var date = new Date();
+            if(date1<date){
+                layer.msg('请选择正确的时间哦');
+            }else{
+                $.ajax({
+                    url:'/queue/submitorder/0/',
+                    data:{productpk:productid,personpk:personid,time:strtime},
+                    type:'POST',
+                })
+                .done(function (data) {
+                    layer.msg(data)
+                    setTimeout(function(){window.location.href = "/queue/myorder/0";}, 2000);
+                })
+                .fail(function (xhr,status,errorThrown) {
+                   layer.msg(status)
+                });
+            }
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="headerIcon">
+         <div class="item">
+                <div class="personIcon">
+                    <img src="{{ person.icon.url }}">
+                </div>
+                <span>{{ person.name }}</span>
+                <span>{{ person.des }}</span>
+            </div>
+    </div>
+
+    <div class="datePicker">
+        <i class="timeiocn"></i>
+        <span>选择时间</span>
+        <input  id= "datePicker" type="datetime-local" value="{{ now }}">
+{#        <i class="indicator"></i>#}
+    </div>
+
+    <a class="footerBtn" onclick="submit({{ product.id }},{{ person.id }})">点击预约</a>
+
+{% endblock %}
